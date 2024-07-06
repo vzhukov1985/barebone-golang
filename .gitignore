@@ -16,3 +16,4 @@ $RECYCLE.BIN/
 .docker/
 BACKUPS/
 tmp
+output/
