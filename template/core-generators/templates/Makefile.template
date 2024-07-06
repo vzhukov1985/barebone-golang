@@ -1,0 +1,17 @@
+GOPRIVATE=github.com/{{.orgName}}/{{.pkgRepoName}}
+export
+
+mod-upd:
+	@echo Syncing and updating packages...
+	@go get -u ...
+	@go mod tidy
+
+mod-build:
+	@echo Syncing and updating packages...
+	-@rm go.mod
+	-@rm go.sum
+	@go mod init core-{{.serviceName}}
+	@go mod tidy
+
+gen-rest:
+	@cd ../core-generators && make gen-rest {{.serviceName}}

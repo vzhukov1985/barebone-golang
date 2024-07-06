@@ -1,0 +1,11 @@
+title: ErrorObject
+type: object
+properties:
+  code:
+    $ref: ./ErrorCode.yaml
+  error:
+    type: string
+  field:
+    type: string
+required:
+  - error

@@ -1,0 +1,12 @@
+title: ErrorCode
+x-stoplight:
+  id: w6g0atxrofyc0
+type: string
+enum:
+  - undefined
+  - parseRequest
+  - lockError
+x-error-descriptions:
+  undefined: undefined
+  parseRequest: +request parse error
+  lockError: lock error

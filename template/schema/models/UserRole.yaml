@@ -1,0 +1,6 @@
+title: UserRole
+x-stoplight:
+  id: 7hud2dxtphit1
+type: string
+enum:
+  - admin
