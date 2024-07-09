@@ -7,6 +7,6 @@ import (
 
 func Authorize(roles ...models.UserRole) func(c *fiber.Ctx) error {
 	return func(c *fiber.Ctx) error {
-		return nil
+		return c.Next()
 	}
 }

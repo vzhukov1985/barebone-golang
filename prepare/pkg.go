@@ -113,6 +113,10 @@ func createModules(outDir, orgName, pkgRepoName string, pkgOrder []string) error
 			return err
 		}
 
+		if err := utils.ShellExec(wd, []string{}, "git", "push"); err != nil {
+			return err
+		}
+
 		if err := utils.ShellExec(wd, []string{}, "git", "tag", fmt.Sprintf("%s/v1.0.0", v)); err != nil {
 			return err
 		}
